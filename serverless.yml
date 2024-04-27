@@ -1,0 +1,16 @@
+org: shiunchiu
+app: serverless-framework-101
+service: serverless-framework-101
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.11
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
